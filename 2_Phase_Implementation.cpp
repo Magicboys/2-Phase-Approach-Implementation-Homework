@@ -42,7 +42,7 @@ int main()
     ToString();
 }
 
-//Handles the Phase One, Commit and Phase Two transaction for the linkedlist add operation
+//Handles the Phase One, Commit Decision, and Phase Two transaction for the linkedlist add operation
 void Add(int iKey, const char* string) {
     Node* newNode = new (std::nothrow) Node;
     bool continueToPhaseTwo = true;
@@ -112,7 +112,7 @@ void Add(int iKey, const char* string) {
 }
 
 
-//Handles the Phase One, Commit and Phase Two transaction for the linkedlist delete operation
+//Handles the Phase One, Commit Decision, and Phase Two transaction for the linkedlist delete operation
 void Delete(int iKey) {
     bool continueToPhaseTwo = false;
 
