@@ -38,7 +38,11 @@ int main()
     ToString();
     Add(0, d); //pam caleb tyler
     ToString();
-    Delete(1); //pam tyler
+    Delete(2); //pam caleb
+    ToString();
+    Add(0, b); //tyler pam caleb
+    ToString();
+    Delete(2); //tyler pam
     ToString();
 }
 
@@ -132,6 +136,11 @@ void Delete(int iKey) {
         if ((iKey == 0) && (_head != nullptr)) {
             continueToPhaseTwo = true;
         }
+
+        if (currentNode->next == nullptr) {
+            continueToPhaseTwo = true;
+        }
+        
     }
 
     //Commit Decision
@@ -163,6 +172,11 @@ void Delete(int iKey) {
         previousNode = currentNode;
         currentNode = currentNode->next;
         i++;
+    }
+
+    if (i == iKey) {
+        previousNode->next = nullptr;
+        delete currentNode;
     }
 }
 
