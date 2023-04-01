@@ -38,7 +38,7 @@ int main()
     ToString();
     Add(0, d); //pam caleb tyler
     ToString();
-    Delete(0); //caleb tyler
+    Delete(1); //pam tyler
     ToString();
 }
 
@@ -153,6 +153,7 @@ void Delete(int iKey) {
     //If we want to delete an element in the middle
     Node* previousNode = _head;
     int i = 0;
+    currentNode = _head;
     while (currentNode->next != nullptr) {
         if (i == iKey) {
             previousNode->next = currentNode->next;
